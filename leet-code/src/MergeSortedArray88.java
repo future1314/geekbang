@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  *
  * 输入:
@@ -10,6 +8,8 @@ import java.util.Arrays;
  *
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/merge-sorted-array
+ * 推荐解法：https://leetcode.com/problems/merge-sorted-array/discuss/29522/This-is-my-AC-code-may-help-you
+ * 解答视频：https://www.bilibili.com/video/av16314956?from=search&seid=9718674552323135289
  */
 public class MergeSortedArray88 {
 
@@ -22,60 +22,7 @@ public class MergeSortedArray88 {
     // 时间复杂度：O(n) 空间复杂度：O(m)
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        if(nums1 == null || nums2 == null || n == 0){
-            return;
-        }
 
-        if(m == 0){
-            for (int i = 0; i < n; i++) {
-                nums1[i] = nums2[i];
-            }
-            return;
-        }
-
-        int[] nums = Arrays.copyOf(nums1, m);
-        int i = 0;
-        int i1 = 0;
-        int i2 = 0;
-        boolean isEmpty1 = false;
-        boolean isEmpty2 = false;
-        while (!isEmpty1 && !isEmpty2){
-            int num1 = nums[i1];
-            int num2 = nums2[i2];
-
-            if(num1 < num2){
-                nums1[i] = num1;
-                i1++;
-                if(m == 0 || i1 == m){
-                    isEmpty1 = true;
-                }
-            }else {
-                nums1[i] = num2;
-                i2++;
-                if(n == 0 || i2 == n){
-                    isEmpty2 = true;
-                }
-            }
-            i++;
-        }
-
-        int[] lastNums;
-        int lastIndex;
-        int lastCount;
-        if(isEmpty1){
-            lastNums = nums2;
-            lastIndex = i2;
-            lastCount =  n;
-        }else {
-            lastNums = nums;
-            lastIndex = i1;
-            lastCount = m;
-        }
-
-        for (; lastIndex < lastCount; lastIndex++) {
-            nums1[i] = lastNums[lastIndex];
-            i++;
-        }
     }
 
 }
