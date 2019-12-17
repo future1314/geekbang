@@ -1,4 +1,8 @@
+import com.sun.jmx.remote.internal.ArrayQueue;
+
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ValidPalindrome125 {
 
@@ -41,9 +45,14 @@ public class ValidPalindrome125 {
     }
 
     public static void main(String[] args) {
-        int result = (1 + 6) % 7;
+        int result = 6 % 5;
         System.out.println(result);
-        ConcurrentHashMap concurrentHashMap;
+        AtomicInteger atomicInteger;
+        ArrayQueue arrayQueue;
+        HashMap hashMap = new HashMap(9);
+        hashMap.put("", "");
+        System.out.println();
+
     }
 
 }
