@@ -1,8 +1,5 @@
-import java.math.BigInteger;
-import java.util.*;
-
 // https://leetcode-cn.com/problems/valid-anagram/description/
-public class ValidAnagram {
+public class ValidAnagram242 {
 
     /*
     解题思路
@@ -52,7 +49,7 @@ public class ValidAnagram {
     }
 
     public static void main(String[] args) {
-        ValidAnagram v = new ValidAnagram();
+        ValidAnagram242 v = new ValidAnagram242();
         System.out.println(v.isAnagram("anagram","nagaram"));
         System.out.println(v.isAnagram("aacc","ccac"));
         System.out.println(v.isAnagram("aa","bb"));
