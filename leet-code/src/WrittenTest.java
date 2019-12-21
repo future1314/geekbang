@@ -2,6 +2,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
@@ -189,32 +191,39 @@ public class WrittenTest {
         WrittenTest test = new WrittenTest();
 
         // 1. 2个大数相加测试
-        System.out.println("第一题测试");
-        System.out.println("2".equals(test.bigAdd("1", "1")) ? "OK" : "ERROR");
-        System.out.println("246".equals(test.bigAdd("123", "123")) ? "OK" : "ERROR");
-        System.out.println("240".equals(test.bigAdd("120", "120")) ? "OK" : "ERROR");
-        System.out.println("500".equals(test.bigAdd("250", "250")) ? "OK" : "ERROR");
-        System.out.println("4294967294".equals(test.bigAdd(Integer.MAX_VALUE + "", Integer.MAX_VALUE + "")) ? "OK" : "ERROR");
-        System.out.println("18446744073709551614".equals(test.bigAdd(Long.MAX_VALUE + "", Long.MAX_VALUE + "")) ? "OK" : "ERROR");
-        System.out.println("22222222222222222222222222222222222222222222222222"
-                .equals(test.bigAdd("11111111111111111111111111111111111111111111111111",
-                        "11111111111111111111111111111111111111111111111111")) ? "OK" : "ERROR");
-        System.out.println("22222222222222222222222222222222222222222222222238"
-                .equals(test.bigAdd("11111111111111111111111111111111111111111111111119",
-                        "11111111111111111111111111111111111111111111111119")) ? "OK" : "ERROR");
-        System.out.println("30222222222222222222222222222222222222222222222238"
-                .equals(test.bigAdd("15111111111111111111111111111111111111111111111119",
-                        "15111111111111111111111111111111111111111111111119")) ? "OK" : "ERROR");
+//        System.out.println("第一题测试");
+//        System.out.println("2".equals(test.bigAdd("1", "1")) ? "OK" : "ERROR");
+//        System.out.println("246".equals(test.bigAdd("123", "123")) ? "OK" : "ERROR");
+//        System.out.println("240".equals(test.bigAdd("120", "120")) ? "OK" : "ERROR");
+//        System.out.println("500".equals(test.bigAdd("250", "250")) ? "OK" : "ERROR");
+//        System.out.println("4294967294".equals(test.bigAdd(Integer.MAX_VALUE + "", Integer.MAX_VALUE + "")) ? "OK" : "ERROR");
+//        System.out.println("18446744073709551614".equals(test.bigAdd(Long.MAX_VALUE + "", Long.MAX_VALUE + "")) ? "OK" : "ERROR");
+//        System.out.println("22222222222222222222222222222222222222222222222222"
+//                .equals(test.bigAdd("11111111111111111111111111111111111111111111111111",
+//                        "11111111111111111111111111111111111111111111111111")) ? "OK" : "ERROR");
+//        System.out.println("22222222222222222222222222222222222222222222222238"
+//                .equals(test.bigAdd("11111111111111111111111111111111111111111111111119",
+//                        "11111111111111111111111111111111111111111111111119")) ? "OK" : "ERROR");
+//        System.out.println("30222222222222222222222222222222222222222222222238"
+//                .equals(test.bigAdd("15111111111111111111111111111111111111111111111119",
+//                        "15111111111111111111111111111111111111111111111119")) ? "OK" : "ERROR");
+//
+//        System.out.println();
+//        System.out.println("第二题测试");
+//        System.out.println("1970-01-01 00:00:00".equals(test.getDate(0L)) ? "OK" : "ERROR");
+//
+//        System.out.println();
+//        System.out.println("第三题测试");
+//        List<String> methods = test.getMethods("../WrittenTest.class", "WrittenTest");
+//        for (String method : methods) {
+//            System.out.println(method);
+//        }
 
-        System.out.println();
-        System.out.println("第二题测试");
-        System.out.println("1970-01-01 00:00:00".equals(test.getDate(0L)) ? "OK" : "ERROR");
+        BigInteger a = new BigInteger("15111111111111111111111111111111111111111111111119");
+        BigInteger b = new BigInteger("151111111111111111111111111111111111111111111111129");
+        new BigInteger("151111111111111111111111111111111111111111311111119");
+        System.out.println(a.add(b));
 
-        System.out.println();
-        System.out.println("第三题测试");
-        List<String> methods = test.getMethods("../WrittenTest.class", "WrittenTest");
-        for (String method : methods) {
-            System.out.println(method);
-        }
+
     }
 }
