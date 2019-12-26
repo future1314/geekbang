@@ -2,6 +2,8 @@ public class constructBinaryTreeFromPreorderAndInorderTraversal105 {
     // 105. 从前序与中序遍历序列构造二叉树 https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
     /*
+    国际站代码 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/34543/Simple-O(n)-without-map
+    国内站解法分析 https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by--22/
     解题思路：
     1. 从左到右遍历preorder、inorder
     2. preorder的第一个元素一定是根元素
