@@ -21,7 +21,7 @@ public class MergeSortedArray88 {
     //   填充剩下的非空数组到nums1
     // 时间复杂度：O(n) 空间复杂度：O(m)
 
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public void merge(char[] nums1, char m, char[] nums2, char n) {
 
     }
 
