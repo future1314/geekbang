@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class LinkedListCycle141 {
     // 141. 环形链表 https://leetcode-cn.com/problems/linked-list-cycle/
 
@@ -18,6 +15,19 @@ public class LinkedListCycle141 {
             fast = fast.next.next;
         }
         return true;
+    }
+
+    // https://leetcode.com/problems/linked-list-cycle/discuss/44489/O(1)-Space-Solution
+    public boolean hasCycle1(ListNode head) {
+        if (head == null) return false;
+        ListNode walker = head;
+        ListNode runner = head;
+        while (runner.next != null && runner.next.next != null) {
+            walker = walker.next;
+            runner = runner.next.next;
+            if (walker == runner) return true;
+        }
+        return false;
     }
 
     class ListNode {
